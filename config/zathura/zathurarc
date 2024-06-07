@@ -1,0 +1,17 @@
+# ~/.config/zathura/zathurarc
+#
+# Startup configuration for zathura.
+#
+# author: gergedan
+
+set recolor true                        # enable custom colors
+
+# best colors ever! For dark reading experience.
+set recolor-lightcolor '#1f1f1f'
+
+# set recolor-darkcolor '#dcdccc'
+set recolor-darkcolor '#e6e6e6'
+
+
+# TODO create custom keybindings for this beautiful blue color
+#      set recolor-lightcolor "#102f3a"
