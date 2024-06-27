@@ -32,6 +32,21 @@ ls.add_snippets('go', {
   })
 })
 
+ls.add_snippets('go', {
+  s('funccheck', {
+    t('func check(e error) {'),
+    t({'', ''}),
+    t('  if e != nil {'),
+    t({'', ''}),
+    t('    panic(e)'),
+    t({'', ''}),
+    t('  }'),
+    t({'', ''}),
+    t('}'),
+    t({'', ''}),
+  })
+})
+
 -- MAKEFILE
 
 ls.add_snippets('make', {
