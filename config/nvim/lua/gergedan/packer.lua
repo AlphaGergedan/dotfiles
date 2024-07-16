@@ -79,6 +79,12 @@ return require('packer').startup(function(use)
     },
   })
 
+  -- discord presence
+  use({
+    'vyfor/cord.nvim',
+    run = './build',
+  })
+
   -- colorschemes
   use({ 'rose-pine/neovim', as = 'rose-pine' })
   use({ 'Mofiqul/dracula.nvim', as = 'dracula' })
