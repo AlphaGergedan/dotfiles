@@ -18,4 +18,4 @@ end
 -- light: "edge"
 -- dark : "aylin", ""
 
-ColorMyPencils("gruvbox", "light")
+ColorMyPencils("rose-pine-main", "dark")
