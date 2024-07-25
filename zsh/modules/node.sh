@@ -1,5 +1,5 @@
 
 # use latest node
 #nvm use node
-nvm use v22.4.1
+nvm use v22.5.1
 
