@@ -55,7 +55,7 @@ cmp.setup({
     { name = 'nvim_lsp', priority = 100 },
     { name = 'nvim_lua', priority = 150 },
     { name = 'luasnip', priority = 120 },
-    { name = 'codeium', priority = 200 },
+    { name = 'codeium', priority = 20 },
   },
 
   snippet = {
