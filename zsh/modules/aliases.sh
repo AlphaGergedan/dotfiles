@@ -77,4 +77,9 @@ alias tmux="tmux -f $HOME/.config/tmux/tmux.conf"
 
 alias path="echo $PATH"
 
-echo "-> $(basename $0 .sh) is loaded.."
+# zshmod aliases
+alias list="zshmod list"
+alias load="zshmod load"
+alias uload="zshmod unload"
+
+echo " ➜ $(basename $0 .sh) is loaded.."
