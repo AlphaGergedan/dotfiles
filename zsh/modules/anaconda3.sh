@@ -16,4 +16,9 @@ else
 fi
 unset __conda_setup
 
-echo "-> $(basename $0 .sh) is loaded."
+# fastapi completion
+autoload -Uz compinit
+zstyle ':completion:*' menu select
+fpath+=~/.zfunc
+
+echo " ➜ $(basename $0 .sh) is loaded."
