@@ -4562,4 +4562,4 @@ else
 fi
 
 
-echo "-> $_rust is loaded.."
+echo " ➜ $_rust is loaded.."

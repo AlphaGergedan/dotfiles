@@ -10,4 +10,4 @@
 export BUN_INSTALL="$HOME/.bun"
 path_prepend $BUN_INSTALL/bin
 
-echo "-> $(basename $0 .sh) is loaded."
+echo " ➜ $(basename $0 .sh) is loaded."

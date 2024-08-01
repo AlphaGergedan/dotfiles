@@ -10,4 +10,4 @@ if [ -e "$HOME/.zsh/zsh-history-substring-search/zsh-history-substring-search.zs
   bindkey "^J" history-substring-search-down # CTRL+ALT+J
 fi
 
-echo "-> $(basename $0 .sh) is loaded.."
+echo " ➜ $(basename $0 .sh) is loaded.."

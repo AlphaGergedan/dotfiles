@@ -24,4 +24,4 @@ bindkey '^[Od' backward-word
 bindkey '^[[1;5D' backward-word
 bindkey '^[[1;5C' forward-word
 
-echo "-> $(basename $0 .sh) is loaded.."
+echo " ➜ $(basename $0 .sh) is loaded.."

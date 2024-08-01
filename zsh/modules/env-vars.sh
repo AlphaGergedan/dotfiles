@@ -20,4 +20,4 @@ export HISTSIZE=10000000
 export HISTTIMEFORMAT="[%F %T] "
 export SAVEHIST=10000000
 
-echo "-> $(basename $0 .sh) is loaded."
+echo " ➜ $(basename $0 .sh) is loaded."

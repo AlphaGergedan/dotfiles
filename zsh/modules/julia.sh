@@ -6,4 +6,4 @@
 
 path_prepend $HOME/.local/juliaup/bin
 
-echo "-> $(basename $0 .sh) is loaded."
+echo " ➜ $(basename $0 .sh) is loaded."

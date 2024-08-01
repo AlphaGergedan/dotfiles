@@ -4,4 +4,4 @@
 
 #source <(ng completion script)
 
-echo "-> $(basename $0 .sh) is loaded."
+echo " ➜ $(basename $0 .sh) is loaded."

@@ -14,4 +14,4 @@ xset r rate 150 50
 # see user packages first
 path_prepend $HOME/.local/bin
 
-echo "-> $(basename $0 .sh) loaded.."
+echo " ➜ $(basename $0 .sh) loaded.."

@@ -18,4 +18,4 @@ export NVM_DIR="$HOME/.local/nvm"
 # wasm
 #export NODE_OPTIONS="--openssl-legacy-provider"
 
-echo "-> $(basename $0 .sh) is loaded.."
+echo " ➜ $(basename $0 .sh) is loaded.."

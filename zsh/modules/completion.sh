@@ -18,4 +18,4 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=*' 'r:|=*
 compinit
 source $HOME/.zsh/zsh-completions/zsh-completions.plugin.zsh
 
-echo "-> $(basename $0 .sh) loaded.."
+echo " ➜ $(basename $0 .sh) loaded.."

@@ -6,4 +6,4 @@
 
 path_prepend $HOME/.local/flutter/v3.22.1/bin
 
-echo "-> $(basename $0 .sh) is loaded."
+echo " ➜ $(basename $0 .sh) is loaded."

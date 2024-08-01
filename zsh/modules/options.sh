@@ -24,4 +24,4 @@ setopt HIST_FIND_NO_DUPS
 # do not save duplicate commands at all
 setopt HIST_IGNORE_ALL_DUPS
 
-echo "-> $(basename $0 .sh) is loaded."
+echo " ➜ $(basename $0 .sh) is loaded."

@@ -10,4 +10,4 @@ path_prepend $GOROOT/bin
 path_prepend $GOPATH/bin
 path_prepend /usr/local/go/bin
 
-echo "-> $(basename $0 .sh) is loaded."
+echo " ➜ $(basename $0 .sh) is loaded."
