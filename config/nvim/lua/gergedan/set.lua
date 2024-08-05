@@ -21,5 +21,5 @@ vim.opt.signcolumn = "yes"
 vim.opt.encoding = "UTF-8"
 vim.opt.cmdheight = 2
 vim.opt.updatetime = 50
-vim.opt.colorcolumn = "0" -- maybe fix this later
+vim.opt.colorcolumn = "100"
 vim.g.mapleader = " "
