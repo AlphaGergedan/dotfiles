@@ -28,7 +28,7 @@ alias ...="cd ../../"
 alias cd..="cd .."
 
 # memory
-alias usage="du -hd 1"                                      # memory usage in the current dir
+alias disk-usage="du -hd 1"                                      # memory usage in the current dir
 
 alias show="whence"                                         # binary location of a command
 
@@ -83,3 +83,4 @@ alias load="zshmod load"
 alias uload="zshmod unload"
 
 echo " ➜ $(basename $0 .sh) is loaded.."
+
