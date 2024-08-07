@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+desktop_session=$DESKTOP_SESSION
+
+# FIXME this file is not needed as we will use localectl to setup
+# keyboard ==> is set in global config /etc/x11/xorg.conf/..
+#setxkbmap us &
+#setxkbmap -option ctrl:nocaps
+xset r rate 150 50
+xset s off
+
+# display
+export CONNECTED_DISPLAYS=$(xrandr | awk '/ connected/ {print $1}')
+
+# Compositor
+if test "$desktop_session" = "DWM"; then
+    # rounded corners
+    picom --corner-radius 15 &
+fi
+
+# check if there are more than 1 displays connected, if so, turn the display
+# off if it is 'eDP', otherwise make the display render, example:
+#
+# for displays 'eDP' and 'DP-1-0' run
+# xrandr --output eDP --off && xrandr --output DP-1-0 --mode 2560x1440 --rate 59.94 --primary
+for d in $CONNECTED_DISPLAYS; do
+  if test "$d" = "DP-1-0.2"; then
+    xrandr --output eDP --off
+    # LG UltraGear
+    xrandr --output DP-1-0.2 --mode 2560x1440 --rate 164.96 --primary
+  else
+    # auto render if there is no monitor detected which
+    # automatically duplicates all connected displays
+    xrandr --auto
+  fi
+  # wallpaper
+  nitrogen --restore
+done
