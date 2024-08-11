@@ -7,9 +7,9 @@ require('cord').setup {
     reset_on_change = false,                    -- Reset start timestamp on presence change
   },
   editor = {
-    image = 'https://rustacean.net/assets/cuddlyferris.png', -- Image ID or URL in case a custom client id is provided
+    image = 'https://raw.githubusercontent.com/AlphaGergedan/dotfiles/master/config/nvim/assets/ferris.png',
     client = 'neovim',                          -- vim, neovim, lunarvim, nvchad, astronvim or your application's client id
-    tooltip = 'Ferris',                         -- Text to display when hovering over the editor's image
+    tooltip = 'Ferris the crab',                         -- Text to display when hovering over the editor's image
   },
   display = {
     show_time = true,                           -- Display start timestamp
