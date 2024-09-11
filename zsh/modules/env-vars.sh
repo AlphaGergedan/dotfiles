@@ -20,4 +20,12 @@ export HISTSIZE=10000000
 export HISTTIMEFORMAT="[%F %T] "
 export SAVEHIST=10000000
 
+export LESS_TERMCAP_mb=$'\e[1;31m'  # Begin blinking
+export LESS_TERMCAP_md=$'\e[1;31m'  # Begin bold
+export LESS_TERMCAP_me=$'\e[0m'     # End mode
+export LESS_TERMCAP_se=$'\e[0m'     # End standout-mode
+export LESS_TERMCAP_so=$'\e[01;44;33m'  # Begin standout-mode - info box
+export LESS_TERMCAP_ue=$'\e[0m'     # End underline
+export LESS_TERMCAP_us=$'\e[1;32m'  # Begin underline
+
 echo " ➜ $(basename $0 .sh) is loaded."
