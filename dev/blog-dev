@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+# create tmux session and windows
+tmux new-session -d -s blog-dev
+tmux rename-window -t blog-dev:1 EDIT
+tmux new-window -n SERVER
+tmux new-window -n zsh
+
+tmux send-keys -t blog-dev:EDIT 'cd /home/gergedan/repos/github/alphagergedan/alphagergedan.github.io' Enter
+tmux send-keys -t blog-dev:EDIT 'source ~/.zsh/modules/npm.sh' Enter
+tmux send-keys -t blog-dev:EDIT 'source ~/.zsh/modules/node.sh' Enter
+tmux send-keys -t blog-dev:EDIT 'source ~/.zsh/modules/anaconda3.sh' Enter
+tmux send-keys -t blog-dev:EDIT 'source ~/.zsh/modules/go.sh' Enter
+tmux send-keys -t blog-dev:EDIT 'source ~/.zsh/modules/sass.sh' Enter
+tmux send-keys -t blog-dev:EDIT 'conda activate ml' Enter
+tmux send-keys -t blog-dev:EDIT 'nvim .' Enter
+
+tmux send-keys -t blog-dev:SERVER 'cd /home/gergedan/repos/github/alphagergedan/alphagergedan.github.io' Enter
+tmux send-keys -t blog-dev:SERVER 'source ~/.zsh/modules/npm.sh' Enter
+tmux send-keys -t blog-dev:SERVER 'source ~/.zsh/modules/node.sh' Enter
+tmux send-keys -t blog-dev:SERVER 'source ~/.zsh/modules/anaconda3.sh' Enter
+tmux send-keys -t blog-dev:SERVER 'source ~/.zsh/modules/go.sh' Enter
+tmux send-keys -t blog-dev:SERVER 'source ~/.zsh/modules/sass.sh' Enter
+tmux send-keys -t blog-dev:SERVER 'conda activate ml' Enter
+tmux send-keys -t blog-dev:SERVER 'hugo server --gc -D --minify --port 4000' Enter
+
+tmux send-keys -t blog-dev:zsh 'cd /home/gergedan/repos/github/alphagergedan/alphagergedan.github.io' Enter
+tmux send-keys -t blog-dev:zsh 'source ~/.zsh/modules/npm.sh' Enter
+tmux send-keys -t blog-dev:zsh 'source ~/.zsh/modules/node.sh' Enter
+tmux send-keys -t blog-dev:zsh 'source ~/.zsh/modules/anaconda3.sh' Enter
+tmux send-keys -t blog-dev:zsh 'source ~/.zsh/modules/go.sh' Enter
+tmux send-keys -t blog-dev:zsh 'source ~/.zsh/modules/sass.sh' Enter
+tmux send-keys -t blog-dev:zsh 'conda activate ml' Enter
+tmux send-keys -t blog-dev:zsh 'clear' Enter
