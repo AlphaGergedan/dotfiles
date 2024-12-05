@@ -68,6 +68,10 @@ alias fan-turbo="sudo sh -c 'echo 1 >> /sys/devices/platform/asus-nb-wmi/throttl
 alias fan-perf="sudo sh -c 'echo 0 >> /sys/devices/platform/asus-nb-wmi/throttle_thermal_policy'"
 alias fan-silent="sudo sh -c 'echo 2 >> /sys/devices/platform/asus-nb-wmi/throttle_thermal_policy'"
 
+# perf and silent modes
+alias turbo="sudo sh -c 'echo 1 >> /sys/devices/platform/asus-nb-wmi/throttle_thermal_policy && cpupower frequency-set --governor performance --min 3.30GHz --max 3.30GHz'"
+alias silent="sudo sh -c 'echo 2 >> /sys/devices/platform/asus-nb-wmi/throttle_thermal_policy && cpupower frequency-set --governor powersave --min 1.20GHz --max 1.20GHz'"
+
 # battery control
 alias bat-stat="cat /sys/class/power_supply/BAT0/status"
 alias bat-perc="cat /sys/class/power_supply/BAT0/capacity"
@@ -81,6 +85,12 @@ alias path="echo $PATH"
 alias list="zshmod list"
 alias load="zshmod load"
 alias uload="zshmod unload"
+
+# edit files
+alias e="nvim"
+
+# solana key seed alias
+alias solana-keygen-seed="figure artefact region critic box harbor slush drop aim output cruise aerobic"
 
 echo " ➜ $(basename $0 .sh) is loaded.."
 
