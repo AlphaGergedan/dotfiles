@@ -5,6 +5,7 @@
 #########################################
 
 export GOPATH=$HOME/.local/go
+export GOBIN=$GOPATH/bin
 
 path_prepend $GOROOT/bin
 path_prepend $GOPATH/bin
