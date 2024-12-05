@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+# create tmux session and windows
+tmux new-session -d -s generic-dev
+tmux rename-window -t generic-dev:1 lab
+tmux new-window -n code
+tmux new-window -n zsh
+tmux new-window -n sketch
+
+tmux send-keys -t generic-dev:lab 'cd ~/academy/random-d-hnn/repo/notebooks' Enter
+tmux send-keys -t generic-dev:lab 'source ~/.zsh/modules/npm.sh' Enter
+tmux send-keys -t generic-dev:lab 'source ~/.zsh/modules/node.sh' Enter
+tmux send-keys -t generic-dev:lab 'source ~/.zsh/modules/anaconda3.sh' Enter
+tmux send-keys -t generic-dev:lab 'conda activate torch-notebook' Enter
+tmux send-keys -t generic-dev:lab 'jupyter-lab' Enter
+
+# code editing
+tmux send-keys -t generic-dev:code 'cd ~/academy/random-d-hnn/repo/notebooks' Enter
+tmux send-keys -t generic-dev:code 'source ~/.zsh/modules/npm.sh' Enter
+tmux send-keys -t generic-dev:code 'source ~/.zsh/modules/node.sh' Enter
+tmux send-keys -t generic-dev:code 'source ~/.zsh/modules/anaconda3.sh' Enter
+tmux send-keys -t generic-dev:code 'conda activate torch-notebook' Enter
+tmux send-keys -t generic-dev:code 'e .' Enter
+
+# zsh
+tmux send-keys -t generic-dev:zsh 'cd ~/academy/random-d-hnn/repo/notebooks' Enter
+tmux send-keys -t generic-dev:zsh 'source ~/.zsh/modules/npm.sh' Enter
+tmux send-keys -t generic-dev:zsh 'source ~/.zsh/modules/node.sh' Enter
+tmux send-keys -t generic-dev:zsh 'source ~/.zsh/modules/anaconda3.sh' Enter
+tmux send-keys -t generic-dev:zsh 'conda activate torch-notebook' Enter
+
+tmux send-keys -t generic-dev:sketch 'cd ~/academy/s-spnn-paper' Enter
+tmux send-keys -t generic-dev:sketch 'source ~/.zsh/modules/npm.sh' Enter
+tmux send-keys -t generic-dev:sketch 'source ~/.zsh/modules/node.sh' Enter

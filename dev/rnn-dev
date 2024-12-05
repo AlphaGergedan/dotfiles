@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+
+# create tmux session and windows
+tmux new-session -d -s rnn-dev
+tmux rename-window -t rnn-dev:1 lab
+tmux new-window -n code
+tmux new-window -n zsh
+tmux new-window -n fastapi
+tmux new-window -n streamlit
+tmux new-window -n edit
+tmux new-window -n term
+
+tmux send-keys -t rnn-dev:lab 'cd ~/ssd/SanDisk/playground/ml/text-classification-rnn-pytorch' Enter
+tmux send-keys -t rnn-dev:code 'cd ~/ssd/SanDisk/playground/ml/text-classification-rnn-pytorch' Enter
+tmux send-keys -t rnn-dev:zsh 'cd ~/ssd/SanDisk/playground/ml/text-classification-rnn-pytorch' Enter
+tmux send-keys -t rnn-dev:fastapi 'cd /home/gergedan/ssd/SanDisk/playground/ml/text-generation-rnn-pytorch' Enter
+tmux send-keys -t rnn-dev:streamlit 'cd /home/gergedan/ssd/SanDisk/playground/ml/text-generation-rnn-pytorch' Enter
+tmux send-keys -t rnn-dev:edit 'cd /home/gergedan/ssd/SanDisk/playground/ml/text-generation-rnn-pytorch' Enter
+tmux send-keys -t rnn-dev:term 'cd /home/gergedan/ssd/SanDisk/playground/ml/text-generation-rnn-pytorch' Enter
+
+tmux send-keys -t rnn-dev:lab 'source ~/.zsh/modules/anaconda3.sh' Enter
+tmux send-keys -t rnn-dev:lab 'conda activate torch-notebook' Enter
+tmux send-keys -t rnn-dev:lab 'jupyter-lab' Enter
+
+tmux send-keys -t rnn-dev:code 'source ~/.zsh/modules/anaconda3.sh' Enter
+tmux send-keys -t rnn-dev:code 'conda activate torch-notebook' Enter
+tmux send-keys -t rnn-dev:code 'source ~/.zsh/modules/npm.sh' Enter
+tmux send-keys -t rnn-dev:code 'source ~/.zsh/modules/node.sh' Enter
+tmux send-keys -t rnn-dev:code 'nvim .' Enter
+
+tmux send-keys -t rnn-dev:zsh 'source ~/.zsh/modules/anaconda3.sh' Enter
+tmux send-keys -t rnn-dev:zsh 'conda activate torch-notebook' Enter
+tmux send-keys -t rnn-dev:zsh 'source ~/.zsh/modules/npm.sh' Enter
+tmux send-keys -t rnn-dev:zsh 'source ~/.zsh/modules/node.sh' Enter
+
+tmux send-keys -t rnn-dev:fastapi 'source ~/.zsh/modules/anaconda3.sh' Enter
+tmux send-keys -t rnn-dev:fastapi 'conda activate torch-st-fapi' Enter
+tmux send-keys -t rnn-dev:fastapi 'source ~/.zsh/modules/npm.sh' Enter
+tmux send-keys -t rnn-dev:fastapi 'source ~/.zsh/modules/node.sh' Enter
+tmux send-keys -t rnn-dev:fastapi 'fastapi dev src/api.py' Enter
+
+tmux send-keys -t rnn-dev:streamlit 'source ~/.zsh/modules/anaconda3.sh' Enter
+tmux send-keys -t rnn-dev:streamlit 'conda activate torch-st-fapi' Enter
+tmux send-keys -t rnn-dev:streamlit 'source ~/.zsh/modules/npm.sh' Enter
+tmux send-keys -t rnn-dev:streamlit 'source ~/.zsh/modules/node.sh' Enter
+tmux send-keys -t rnn-dev:streamlit 'streamlit run app/app.py' Enter
+
+tmux send-keys -t rnn-dev:edit 'source ~/.zsh/modules/anaconda3.sh' Enter
+tmux send-keys -t rnn-dev:edit 'conda activate torch-st-fapi' Enter
+tmux send-keys -t rnn-dev:edit 'source ~/.zsh/modules/npm.sh' Enter
+tmux send-keys -t rnn-dev:edit 'source ~/.zsh/modules/node.sh' Enter
+tmux send-keys -t rnn-dev:edit 'e .' Enter
+
+tmux send-keys -t rnn-dev:edit 'source ~/.zsh/modules/anaconda3.sh' Enter
+tmux send-keys -t rnn-dev:edit 'conda activate torch-st-fapi' Enter
+tmux send-keys -t rnn-dev:edit 'source ~/.zsh/modules/npm.sh' Enter
+tmux send-keys -t rnn-dev:edit 'source ~/.zsh/modules/node.sh' Enter

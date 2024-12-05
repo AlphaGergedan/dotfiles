@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+# create tmux session and windows
+tmux new-session -d -s rhnn-paper-dev
+tmux rename-window -t rhnn-paper-dev:1 cargo
+tmux new-window -n nvim
+tmux new-window -n zsh
+
+# for running cargo commands
+tmux send-keys -t rhnn-paper-dev:cargo 'cd ~/repos/github/alphagergedan/rhnn-paper' Enter
+tmux send-keys -t rhnn-paper-dev:cargo 'source ~/.zsh/modules/rust.sh' Enter
+tmux send-keys -t rhnn-paper-dev:cargo 'which cargo' Enter
+
+# code editing
+tmux send-keys -t rhnn-paper-dev:nvim 'cd ~/repos/github/alphagergedan/rhnn-paper' Enter
+tmux send-keys -t rhnn-paper-dev:nvim 'source ~/.zsh/modules/rust.sh' Enter
+tmux send-keys -t rhnn-paper-dev:nvim 'clear' Enter
+tmux send-keys -t rhnn-paper-dev:nvim 'nvim' Enter
+
+# empty shell
+tmux send-keys -t rhnn-paper-dev:zsh 'cd ~/repos/github/alphagergedan/rhnn-paper' Enter
+tmux send-keys -t rhnn-paper-dev:zsh 'source ~/.zsh/modules/rust.sh' Enter
+tmux send-keys -t rhnn-paper-dev:zsh 'clear' Enter

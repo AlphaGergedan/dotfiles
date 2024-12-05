@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+
+# create tmux session and windows
+tmux new-session -d -s r-d-hnn-dev
+tmux rename-window -t r-d-hnn-dev:1 term
+tmux new-window -n nvim
+tmux new-window -n swimnetworks
+tmux new-window -n r-hnn
+tmux new-window -n zsh
+
+# for running ./main
+tmux send-keys -t r-d-hnn-dev:term 'cd ~/academy/random-d-hnn/repo' Enter
+tmux send-keys -t r-d-hnn-dev:term 'source ~/.zsh/modules/anaconda3.sh' Enter
+tmux send-keys -t r-d-hnn-dev:term 'source ~/.zsh/modules/npm.sh' Enter
+tmux send-keys -t r-d-hnn-dev:term 'source ~/.zsh/modules/node.sh' Enter
+tmux send-keys -t r-d-hnn-dev:term 'conda activate r-d-hnn' Enter
+tmux send-keys -t r-d-hnn-dev:term 'clear' Enter
+tmux send-keys -t r-d-hnn-dev:term './main --help' Enter
+
+# code editing
+tmux send-keys -t r-d-hnn-dev:nvim 'cd ~/academy/random-d-hnn/repo' Enter
+tmux send-keys -t r-d-hnn-dev:nvim 'source ~/.zsh/modules/anaconda3.sh' Enter
+tmux send-keys -t r-d-hnn-dev:nvim 'source ~/.zsh/modules/npm.sh' Enter
+tmux send-keys -t r-d-hnn-dev:nvim 'source ~/.zsh/modules/node.sh' Enter
+tmux send-keys -t r-d-hnn-dev:nvim 'conda activate r-d-hnn' Enter
+tmux send-keys -t r-d-hnn-dev:nvim 'nvim' Enter
+
+# swimnetworks
+tmux send-keys -t r-d-hnn-dev:swimnetworks 'cd ~/repos/gitlab/swimnetworks' Enter
+tmux send-keys -t r-d-hnn-dev:swimnetworks 'source ~/.zsh/modules/anaconda3.sh' Enter
+tmux send-keys -t r-d-hnn-dev:swimnetworks 'source ~/.zsh/modules/npm.sh' Enter
+tmux send-keys -t r-d-hnn-dev:swimnetworks 'source ~/.zsh/modules/node.sh' Enter
+tmux send-keys -t r-d-hnn-dev:swimnetworks 'conda activate swimnetworks' Enter
+tmux send-keys -t r-d-hnn-dev:swimnetworks 'clear' Enter
+tmux send-keys -t r-d-hnn-dev:swimnetworks 'nvim' Enter
+
+# r-hnn
+tmux send-keys -t r-d-hnn-dev:r-hnn 'cd ~/repos/github/Random-HNN' Enter
+tmux send-keys -t r-d-hnn-dev:r-hnn 'source ~/.zsh/modules/anaconda3.sh' Enter
+tmux send-keys -t r-d-hnn-dev:r-hnn 'source ~/.zsh/modules/npm.sh' Enter
+tmux send-keys -t r-d-hnn-dev:r-hnn 'source ~/.zsh/modules/node.sh' Enter
+tmux send-keys -t r-d-hnn-dev:r-hnn 'conda activate r-hnn' Enter
+tmux send-keys -t r-d-hnn-dev:r-hnn 'clear' Enter
+tmux send-keys -t r-d-hnn-dev:r-hnn 'nvim' Enter
+
+# empty shell
+tmux send-keys -t r-d-hnn-dev:zsh 'cd ~/academy/random-d-hnn/repo' Enter
+tmux send-keys -t r-d-hnn-dev:zsh 'source ~/.zsh/modules/anaconda3.sh' Enter
+tmux send-keys -t r-d-hnn-dev:zsh 'source ~/.zsh/modules/npm.sh' Enter
+tmux send-keys -t r-d-hnn-dev:zsh 'source ~/.zsh/modules/node.sh' Enter
+tmux send-keys -t r-d-hnn-dev:zsh 'conda activate r-d-hnn' Enter
+tmux send-keys -t r-d-hnn-dev:zsh 'clear' Enter

@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+# create tmux session and windows
+tmux new-session -d -s saber-dev
+tmux rename-window -t saber-dev:1 app
+tmux new-window -n code
+tmux new-window -n zsh
+
+tmux send-keys -t saber-dev:app 'cd /home/gergedan/ssd/SanDisk/repos/github/alphagergedan/saber' Enter
+tmux send-keys -t saber-dev:app 'source ~/.zsh/modules/npm.sh' Enter
+tmux send-keys -t saber-dev:app 'source ~/.zsh/modules/node.sh' Enter
+tmux send-keys -t saber-dev:app 'source ~/.zsh/modules/flutter.sh' Enter
+tmux send-keys -t saber-dev:app 'flutter run' Enter
+
+# code editing
+tmux send-keys -t saber-dev:code 'cd /home/gergedan/ssd/SanDisk/repos/github/alphagergedan/saber' Enter
+tmux send-keys -t saber-dev:code 'source ~/.zsh/modules/npm.sh' Enter
+tmux send-keys -t saber-dev:code 'source ~/.zsh/modules/node.sh' Enter
+tmux send-keys -t saber-dev:code 'source ~/.zsh/modules/flutter.sh' Enter
+tmux send-keys -t saber-dev:code 'e .' Enter
+
+# zsh
+tmux send-keys -t saber-dev:zsh 'cd /home/gergedan/ssd/SanDisk/repos/github/alphagergedan/saber' Enter
+tmux send-keys -t saber-dev:zsh 'source ~/.zsh/modules/npm.sh' Enter
+tmux send-keys -t saber-dev:zsh 'source ~/.zsh/modules/node.sh' Enter
+tmux send-keys -t saber-dev:zsh 'source ~/.zsh/modules/flutter.sh' Enter
+tmux send-keys -t saber-dev:zsh 'conda activate torch-notebook' Enter
