@@ -98,6 +98,59 @@ ls.add_snippets('make', {
   })
 })
 
+ls.add_snippets('make', {
+  s('tex', {
+    t('MAIN := main'),
+    t({'', ''}),
+    t({'', ''}),
+    t('AUXFILES :=\t\\'),
+    t({'', ''}),
+    t('\t$(MAIN).aux\t\\'),
+    t({'', ''}),
+    t('\t$(MAIN).log\t\\'),
+    t({'', ''}),
+    t('\t$(MAIN).out\t\\'),
+    t({'', ''}),
+    t('\t$(MAIN).dvi\t\\'),
+    t({'', ''}),
+    t('\t$(MAIN).ptc\t\\'),
+    t({'', ''}),
+    t('\t$(MAIN).bbl\t\\'),
+    t({'', ''}),
+    t('\t$(MAIN).blg\t\\'),
+    t({'', ''}),
+    t({'', ''}),
+    t('all: pdf'),
+    t({'', ''}),
+    t({'', ''}),
+    t('pdf:'),
+    t({'', ''}),
+    t('\t# generate aux file'),
+    t({'', ''}),
+    t('\tpdflatex $(MAIN)'),
+    t({'', ''}),
+    t('\t# generate bbl file'),
+    t({'', ''}),
+    t('\tbibtex $(MAIN)'),
+    t({'', ''}),
+    t('\t# incorporates bibliography into document'),
+    t({'', ''}),
+    t('\tpdflatex $(MAIN)'),
+    t({'', ''}),
+    t('\t# twice for cross references'),
+    t({'', ''}),
+    t('\tpdflatex $(MAIN)'),
+    t({'', ''}),
+    t({'', ''}),
+    t('clean:'),
+    t({'', ''}),
+    t('\trm -f $(AUXFILES)'),
+    t({'', ''}),
+    t({'', ''}),
+    t('.PHONY: all pdf clean'),
+  })
+})
+
 -- TODO
 ls.add_snippets('make', {
   s('competprog', {
@@ -198,6 +251,7 @@ ls.add_snippets('html', {
     t('{{ end }}'),
   })
 })
+
 
 
 -- TODO: make email templates

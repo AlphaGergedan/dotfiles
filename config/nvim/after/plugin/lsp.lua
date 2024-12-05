@@ -33,8 +33,32 @@ require('mason-lspconfig').setup({
         filetypes = { "markdown", "latex", "plaintext", "mail", "context", "gitcommit", "bib" },
       }
       require('lspconfig').ltex.setup(ltex_opts)
+    end,
+
+    rust_analyzer = function()
+      local rust_analyzer_opts = {
+        settings = {
+          ['rust-analyzer'] = {
+            showRequestFailedErrorNotification = true,
+            files = {
+              excludeDirs = { "target" }
+            },
+            workspace = {
+              symbol = {
+                search = {
+                  limit = 3000
+                }
+              }
+            }
+          }
+        }
+      }
+      require('lspconfig').rust_analyzer.setup(rust_analyzer_opts)
     end
   }
+
+
+
 })
 
 -- keymaps
