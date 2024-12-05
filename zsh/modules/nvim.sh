@@ -4,6 +4,6 @@
 #
 #########################################
 
-path_prepend "$HOME/.local/nvim/nvim-linux64-v0.10.1/bin"
+path_prepend "$HOME/.local/nvim/nvim-linux64-v0.10.2/bin"
 
 echo " ➜ $(basename $0 .sh) loaded.."
