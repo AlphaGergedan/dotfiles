@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# create tmux session and windows
+tmux new-session -d -s aoc-24-dev
+tmux rename-window -t aoc-24-dev:1 EDIT
+tmux new-window -n SANTA-LOG
+
+tmux send-keys -t aoc-24-dev:EDIT 'cd /home/gergedan/playground/rust/algorithms/aoc-2024' Enter
+tmux send-keys -t aoc-24-dev:EDIT 'source ~/.zsh/modules/rust.sh' Enter
+tmux send-keys -t aoc-24-dev:EDIT 'nvim .' Enter
+
+tmux send-keys -t aoc-24-dev:SANTA-LOG 'cd /home/gergedan/playground/rust/algorithms/aoc-2024' Enter
+tmux send-keys -t aoc-24-dev:SANTA-LOG 'source ~/.zsh/modules/rust.sh' Enter

@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# create tmux session and windows
+tmux new-session -d -s get-rusty-dev
+tmux rename-window -t get-rusty-dev:1 EDIT
+tmux new-window -n zsh
+
+tmux send-keys -t get-rusty-dev:EDIT 'cd /home/gergedan/repos/github/alphagergedan/getting-rusty-bootcamp' Enter
+tmux send-keys -t get-rusty-dev:EDIT 'source ~/.zsh/modules/npm.sh' Enter
+tmux send-keys -t get-rusty-dev:EDIT 'source ~/.zsh/modules/node.sh' Enter
+tmux send-keys -t get-rusty-dev:EDIT 'nvim .' Enter
+
+tmux send-keys -t get-rusty-dev:zsh 'cd /home/gergedan/repos/github/alphagergedan/alphagergedan.github.io' Enter
