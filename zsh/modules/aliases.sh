@@ -39,6 +39,8 @@ alias include-path-cpp="echo | gcc -x c++ -E -Wp,-v - >/dev/null"
 # Git aliases
 #alias gitu='git add . && git commit && git push'
 alias g='git'
+alias gac='git add . && git commit'
+alias gpom='git push origin master'
 
 # set a random background image
 alias bg-random='nitrogen --set-zoom-fill --save --random $HOME/repos/github/wallpapers'

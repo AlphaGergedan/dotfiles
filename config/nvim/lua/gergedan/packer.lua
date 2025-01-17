@@ -64,12 +64,12 @@ return require('packer').startup(function(use)
   --use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
 
   -- codeium
-  use({
-    "Exafunction/codeium.nvim",
-    requires = {
-      "nvim-lua/plenary.nvim", "hrsh7th/nvim-cmp",
-    }
-  })
+  --use({
+    --"Exafunction/codeium.nvim",
+    --requires = {
+      --"nvim-lua/plenary.nvim", "hrsh7th/nvim-cmp",
+    --}
+  --})
 
   -- flutter
   use({
@@ -80,10 +80,10 @@ return require('packer').startup(function(use)
   })
 
   -- discord presence
-  use({
-    'vyfor/cord.nvim',
-    run = './build',
-  })
+  --use({
+    --'vyfor/cord.nvim',
+    --run = './build',
+  --})
 
   -- colorschemes
   use({ 'rose-pine/neovim', as = 'rose-pine' })

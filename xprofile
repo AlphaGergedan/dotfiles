@@ -36,3 +36,9 @@ for d in $CONNECTED_DISPLAYS; do
   # wallpaper
   nitrogen --restore
 done
+
+# Statusbar loop
+#while true; do
+   #xsetroot -name "$( bat-stat )"
+   #sleep 1m    # Update time every minute
+#done &

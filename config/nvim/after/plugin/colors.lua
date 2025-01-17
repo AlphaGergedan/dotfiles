@@ -1,8 +1,6 @@
-
-
 function ColorMyPencils(color, mode)
 	color = color or "gruvbox"
-  mode = mode or "dark"
+  --mode = mode or "dark"
 
 	vim.cmd.colorscheme(color)
   vim.opt.background = mode
@@ -18,9 +16,22 @@ end
 -- light: "edge"
 -- dark : "aylin", ""
 
---ColorMyPencils("rose-pine-main", "dark")
-ColorMyPencils("rose-pine-dawn", "light")
+--ColorMyPencils("rose-pine-main")
+--ColorMyPencils("rose-pine-dawn", "dark")
+--ColorMyPencils("gruvbox", "dark")
+--ColorMyPencils("gruvbox")
+--ColorMyPencils("kanagawa", "dark")
+--ColorMyPencils("kanagawa-dragon")
 --ColorMyPencils("gruvbox", "light")
+--ColorMyPencils("pink-moon", "light")
+ColorMyPencils("pink-moon", "dark")
+--ColorMyPencils("edge")
+--ColorMyPencils("aylin")
 
---ColorMyPencils("edge", "dark")
+--ColorMyPencils("kanagawa", "light")
+--ColorMyPencils("kanagawa", "dark")
 
+--ColorMyPencils("rose-pine-dawn", "light")
+
+
+--ColorMyPencils("gruvbox", "light")

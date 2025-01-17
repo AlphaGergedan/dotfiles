@@ -252,6 +252,23 @@ ls.add_snippets('html', {
   })
 })
 
+-- MARKDOWN
+ls.add_snippets('md', {
+  s('dropdown-codeblock', {
+    t('<details close>'),
+    t({'', ''}),
+    t('  <summary>'),
+    t({'', ''}),
+    t('    Click to see the code for <b>TODO</b>'),
+    t('  </summary>'),
+    t({'', ''}),
+    t('  ```python'),
+    t({'', ''}),
+    t('  ```'),
+    t({'', ''}),
+    t('</details>'),
+  })
+})
 
 
 -- TODO: make email templates

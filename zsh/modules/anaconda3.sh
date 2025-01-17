@@ -21,4 +21,8 @@ autoload -Uz compinit
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
 
+# enable base conda and evaluate completion
+#conda activate
+#eval "$(register-python-argcomplete conda)"
+
 echo " ➜ $(basename $0 .sh) is loaded."
