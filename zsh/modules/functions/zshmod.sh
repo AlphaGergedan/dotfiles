@@ -1,11 +1,6 @@
-function ls-zsh-modules() {
-  print_separator "Available ZSH Modules"
-  echo "$zsh_modules_ls_"
-  print_separator
-}
 
 function zshmod() {
-  local usage="Usage: zshmod {list|load|unload} [module-name]"
+  local usage="Usage: zshmod {list|load} [module-name]"
 
   if [[ $# -eq 0 ]]; then
     echo $usage
@@ -15,10 +10,10 @@ function zshmod() {
   local command=$1
   case "$command" in
     list)
-      print_separator "Unloaded ZSH Modules"
-      echo "\n$unloaded_zsh_modules_ls_\n"
       print_separator "Loaded ZSH Modules"
-      echo "\n$loaded_zsh_modules_ls_\n"
+      basename -s .sh -a ${loaded_zsh_modules_ls_} | sort
+      print_separator "Unloaded ZSH Modules"
+      basename -s .sh -a ${unloaded_zsh_modules_ls_} | sort
       print_separator
       ;;
     load)
@@ -28,43 +23,48 @@ function zshmod() {
         return 1
       fi
 
-      if [[ ${loaded_zsh_modules_ls_[@]} =~ "$2" ]]; then
-        echo "Module $2 already loaded"
-        return 0
-      fi
-
-      if [[ ! ${zsh_modules_ls_[@]} =~ ${2} ]]; then
-        echo "Module $2 not found"
-        return 1
-      fi
-
-      local file="$ZSH_MODULES_/$2.sh"
-      source $file
-      loaded_zsh_modules_ls_+=($file)
-
-      local tmp=()
-      # remove the element from unloaded list
-      for mod_ in "${unloaded_zsh_modules_ls_[@]}"; do
-        if [[ "$mod_" != "$file" ]]; then
-          tmp+=("$mod_")
+      # Check if inside loaded modules
+      for _mod in "${loaded_zsh_modules_ls_[@]}"
+      do
+        local _mod_base=$(basename -s .sh $_mod)
+        if [[ $_mod_base == $2 ]]
+        then
+          echo "Module $2 already loaded"
+          return 0
         fi
       done
 
-      unloaded_zsh_modules_ls_=$tmp
+      for _mod in "${zsh_modules_ls_[@]}"
+      do
+        local _mod_base=$(basename -s .sh $_mod)
+        if [[ $_mod_base == $2 ]]
+        then
+          local _to_load=$ZSH_MODULES_/$2.sh
+          # load the found module
+          source $_to_load
+          loaded_zsh_modules_ls_+=($_to_load)
 
-      echo "Module $2 loaded"
-      return 0
-      ;;
-    unload)
-      # TODO: unload the given module and fix the loaded unloaded modules list
-      echo "Not implemented yet."
+          local new_list=$()
+          for _unloaded_mod in "${unloaded_zsh_modules_ls_[@]}"
+          do
+            if [[ "$_unloaded_mod" == "$_to_load" ]]
+            then
+              continue
+            fi
+            new_list+=($_unloaded_mod)
+          done
+          unloaded_zsh_modules_ls_=(${new_list[@]})
+          return 0
+        fi
+      done
+
+      echo "Module $2 not found"
       return 1
       ;;
     *)
-      echo "Unknown command: $command"
       echo $usage
       return 1
       ;;
-
   esac
 }
+
