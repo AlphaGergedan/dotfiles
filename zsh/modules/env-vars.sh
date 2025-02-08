@@ -27,5 +27,13 @@ export LESS_TERMCAP_se=$'\e[0m'     # End standout-mode
 export LESS_TERMCAP_so=$'\e[01;44;33m'  # Begin standout-mode - info box
 export LESS_TERMCAP_ue=$'\e[0m'     # End underline
 export LESS_TERMCAP_us=$'\e[1;32m'  # Begin underline
+export TERM=xterm-256color
+export COLORTERM=truecolor
+
+# tmux override
+if [ -n "$TMUX" ]
+then
+  export TERM="tmux-256color"
+fi
 
 echo " ➜ $(basename $0 .sh) is loaded."
