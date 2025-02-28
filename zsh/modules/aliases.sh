@@ -42,9 +42,14 @@ alias g='git'
 alias gac='git add . && git commit'
 alias gpul='git pull'
 alias gpus='git push'
+alias gadd='git add'
 alias gcom='git commit'
 alias gsta='git status'
 alias gdif='git diff'
+alias glog='git log'
+alias glfs='git lfs'
+alias gchp='git cherry-pick'
+alias greb='git rebase'
 
 # set a random background image
 alias bg-random='nitrogen --set-zoom-fill --save --random $HOME/repos/github/wallpapers'
@@ -94,6 +99,9 @@ alias uload="zshmod unload"
 
 # edit files
 alias e="nvim"
+
+# Colors are beautiful
+alias rainbow="for i in {0..255}; do print -P \"%F{$i}$i: Example Text%f\"; done"
 
 # solana key seed alias
 alias solana-keygen-seed="figure artefact region critic box harbor slush drop aim output cruise aerobic"
