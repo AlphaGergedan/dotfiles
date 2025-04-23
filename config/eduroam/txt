@@ -1,0 +1,9 @@
+
+nmcli connection add type wifi ifname wlp2s0 con-name eduroam_ssid \
+ssid eduroam \
+-- wifi-sec.key-mgmt wpa-eap \
+802-1x.eap peap \
+802-1x.identity "<insert-username>" \
+802-1x.phase2-auth mschapv2
+
+nmcli connection up eduroam_ssid --ask
