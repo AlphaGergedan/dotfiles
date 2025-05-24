@@ -1,0 +1,12 @@
+auto_activate_base: false
+channels:
+  - conda-forge
+  - pytorch
+  - nodefaults
+channel_priority: flexible
+envs_dirs:
+  - /home/gergedan/ssd/SanDisk/conda/envs
+  - /home/gergedan/.local/miniconda3/envs
+pkgs_dirs:
+  - /home/gergedan/ssd/SanDisk/conda/pkgs
+  - /home/gergedan/.local/miniconda3/pkgs
