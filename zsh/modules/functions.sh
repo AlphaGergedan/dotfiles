@@ -6,8 +6,9 @@
 
 # source all the .sh files in the directory ~/.zsh/modules/functions
 zsh_functions_ls_=($(find "$ZSH_MODULES_/functions" -type f -name "*.sh"))
-for function_ in "${zsh_functions_ls_[@]}"; do
-  test -e "$function_" && source "$function_"
+for function_ in "${zsh_functions_ls_[@]}"
+do
+  test -e "${function_}" && source "${function_}"
 done
 
 # memory usage of a process

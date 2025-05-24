@@ -1,4 +1,7 @@
-. "$HOME/.cargo/env"
+export RUSTUP_HOME="$HOME/ssd/SanDisk/rust/rustup"
+export CARGO_HOME="$HOME/ssd/SanDisk/rust/cargo"
+
+. "$CARGO_HOME/env"
 
 #compdef cargo
 
@@ -4562,4 +4565,4 @@ else
 fi
 
 
-echo " ➜ $_rust is loaded.."
+echo " ➜ $(basename $0 .sh) is loaded."

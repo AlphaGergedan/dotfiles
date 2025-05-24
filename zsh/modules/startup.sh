@@ -14,4 +14,10 @@ xset r rate 150 50
 # see user packages first
 path_prepend $HOME/.local/bin
 
+load anaconda3
+conda activate ml
+
+load rust
+
+
 echo " ➜ $(basename $0 .sh) loaded.."

@@ -106,5 +106,14 @@ alias rainbow="for i in {0..255}; do print -P \"%F{$i}$i: Example Text%f\"; done
 # solana key seed alias
 alias solana-keygen-seed="figure artefact region critic box harbor slush drop aim output cruise aerobic"
 
+# compress pdfs
+# gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=./compressed-a4-arda.pdf ./a4-test.pdf
+
+# split/combine pdfs
+# pdfseparate input.pdf output%d.pdf
+# pdfunite input1.pdf input2.pdf output.pdf
+# pdfjam
+# pandoc
+
 echo " ➜ $(basename $0 .sh) is loaded.."
 

@@ -1,0 +1,13 @@
+Configs to copy over scp to workstations
+========================================
+
+Goal: Have minimal configs.
+
+Setup
+=====
+
+Setup submodules manually:
+- Pure: https://github.com/sindresorhus/pure
+- Syntax highlighting: https://github.com/zsh-users/zsh-syntax-highlighting
+- History substring search: https://github.com/zsh-users/zsh-history-substring-search
+

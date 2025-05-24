@@ -1,0 +1,39 @@
+
+
+
+
+
+Host lxhalle
+  Hostname lxhalle.in.tum.de
+  User rahma
+  IdentityFile ~/.ssh/lxhalle_id_ed25519
+
+Host lxlogin2
+  Hostname lxlogin2.lrz.de
+  User ge49rev3
+  Port 2222
+  IdentityFile ~/.ssh/ge49rev3_id_ecdsa
+
+Host github.com
+  IdentityFile ~/.ssh/github_id_ed25519
+
+Host gitlab.lrz.de
+  IdentityFile ~/.ssh/gitlab_id_ed25519
+
+Host wakeup106
+  Hostname atsccs100.sccs.in.tum.de
+  User ge49rev
+  RemoteCommand python3 /home/mls/wakeup.py atsccs106
+
+Host ws106
+  Hostname atsccs106.sccs.cit.tum.de
+  User ge49rev
+
+Host homeone
+  Hostname sccs-gpu-login.sccs.in.tum.de
+  User ge49rev
+
+Host lrzcourse
+  Hostname 138.246.234.168
+  User student06
+  IdentityFile ~/.ssh/lrz_course_id_ed25519

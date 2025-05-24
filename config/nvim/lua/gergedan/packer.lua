@@ -65,7 +65,7 @@ return require('packer').startup(function(use)
 
   -- codeium
   --use({
-    --"Exafunction/codeium.nvim",
+    --"exafunction/codeium.nvim",
     --requires = {
       --"nvim-lua/plenary.nvim", "hrsh7th/nvim-cmp",
     --}
@@ -101,7 +101,7 @@ return require('packer').startup(function(use)
   --use({ 'kepano/flexoki.nvim', as = 'flexoki' })
   use({ 'jacoborus/tender.vim', as = 'tender' })
   use({ 'savq/melange-nvim', as = 'melange' })
-  use({ 'scottmckendry/cyberdream.nvim', as = 'cyberdream' })
+  --use({ 'scottmckendry/cyberdream.nvim', as = 'cyberdream' })
   use({ 'patstockwell/vim-monokai-tasty', as = 'mookai-tasty' })
   use({ 'sts10/vim-pink-moon', as = 'pink-moon' })
 
