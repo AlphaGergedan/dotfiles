@@ -39,7 +39,7 @@ end
 --ColorMyPencils("kanagawa-dragon", "dark")
 
 --ColorMyPencils("gruvbox", "dark")
-ColorMyPencils("gruvbox", "light")
+ColorMyPencils("gruvbox-material", "dark")
 --ColorMyPencils("cyberdream-light", "dark")
 
 --ColorMyPencils("kanagawa", "light")

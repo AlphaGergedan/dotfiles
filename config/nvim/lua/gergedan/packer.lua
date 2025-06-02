@@ -7,6 +7,9 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use('wbthomason/packer.nvim')
 
+  -- Extensions
+  --use('nvim-lua/plenary.nvim')
+--
   -- fuzzy finder
   use({
     'nvim-telescope/telescope.nvim',
@@ -18,6 +21,39 @@ return require('packer').startup(function(use)
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
   use('nvim-treesitter/playground')
 
+  -- local Ollama integration
+  use('David-Kunz/gen.nvim')
+
+  --use({ 'MeanderingProgrammer/render-markdown.nvim', ft = { 'markdown', 'codecompanion' }, as = "render-markdown", })
+  --use({ 'ravitemer/mcphub.nvim', build = 'npm install -g mcp-hub@latest', } )
+  -- LLM companion setup
+  --use({
+    --'olimorris/codecompanion.nvim',
+    --requires = {
+      --{ 'OXY2DEV/markview.nvim' },
+      --{ 'echasnovski/mini.diff' },
+      --{ 'HakonHarnes/img-clip.nvim' },
+    --}
+  --})
+
+
+
+  -- avante for cursor like LLM experience
+  --use {
+    --'yetone/avante.nvim',
+    --branch = 'main',
+    --run = 'make',
+    --requires = {
+      --{ 'stevearc/dressing.nvim' },
+      --{ 'nvim-lua/plenary.nvim' },
+      --{ 'MunifTanjim/nui.nvim' },
+      --{ 'MeanderingProgrammer/render-markdown.nvim' },
+      --{ 'hrsh7th/nvim-cmp' },
+      --{ 'nvim-tree/nvim-web-devicons' },
+      --{ 'HakonHarnes/img-clip.nvim' },
+      --{ 'zbirenbaum/copilot.lua' },
+    --}
+  --}
   -- harpoon for better file navigation instead of vim-wintabs
   use('theprimeagen/harpoon')
 
@@ -91,6 +127,7 @@ return require('packer').startup(function(use)
   use({ 'navarasu/onedark.nvim', as = 'onedark' })
   use({ "ellisonleao/gruvbox.nvim", as = 'gruvbox' })
   use({ "morhetz/gruvbox", as = 'gruvbox-morhetz' })
+  use({ "sainnhe/gruvbox-material", as = 'gruvbox-material' })
   use({ 'tanvirtin/monokai.nvim', as = 'monokai' })
   use({ 'shaunsingh/nord.nvim', as = 'nord' })
   use({ 'folke/tokyonight.nvim', as = 'tokyonight' })
