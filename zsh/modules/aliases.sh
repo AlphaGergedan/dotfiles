@@ -39,7 +39,7 @@ alias include-path-cpp="echo | gcc -x c++ -E -Wp,-v - >/dev/null"
 # Git aliases
 #alias gitu='git add . && git commit && git push'
 alias g='git'
-alias gac='git add . && git commit'
+#alias gac='git add . && git commit'
 alias gpul='git pull'
 alias gpus='git push'
 alias gadd='git add'
@@ -50,6 +50,10 @@ alias glog='git log'
 alias glfs='git lfs'
 alias gchp='git cherry-pick'
 alias greb='git rebase'
+alias grem='git remote'
+alias gfet='git fetch'
+alias gche='git checkout'
+alias gcon='git config'
 
 # set a random background image
 alias bg-random='nitrogen --set-zoom-fill --save --random $HOME/repos/github/wallpapers'
@@ -114,6 +118,8 @@ alias solana-keygen-seed="figure artefact region critic box harbor slush drop ai
 # pdfunite input1.pdf input2.pdf output.pdf
 # pdfjam
 # pandoc
+
+alias mm="micromamba"
 
 echo " ➜ $(basename $0 .sh) is loaded.."
 

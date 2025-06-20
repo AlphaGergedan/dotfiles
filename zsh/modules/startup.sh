@@ -15,7 +15,8 @@ xset r rate 150 50
 path_prepend $HOME/.local/bin
 
 load anaconda3
-conda activate ml
+load micromamba
+#conda activate ml
 
 load rust
 

@@ -1,6 +1,6 @@
 local gen = require('gen')
 local opts = {
-  model = 'qwen2.5-coder:3b',
+  model = 'qwen2.5-coder:7b',
   quit_map = 'q',                       -- set keymap to close the response window
   retry_map = '<c-r>',                  -- set keymap to re-send the current prompt
   accept_map = '<c-cr>',                -- set keymap to replace the previous selection with the last result

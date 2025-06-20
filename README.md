@@ -1,3 +1,4 @@
+
 # Overview
 
 Mainly includes config files:
@@ -19,3 +20,8 @@ Commands:
 - `nixos-rebuild test --flake /etc/nixos#nixos`
 - Uncomment home-manager settings
 - Generate home.nix `nix run home-manager/master -- init && sudo cp ~/.config/home-manager/home.nix /etc/nixos`
+
+For MAN pages:
+
+- `man configuration.nix`
+- `man home-configuration.nix`

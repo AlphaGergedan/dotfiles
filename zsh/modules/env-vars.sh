@@ -30,6 +30,8 @@ export LESS_TERMCAP_us=$'\e[1;32m'  # Begin underline
 export TERM=xterm-256color
 export COLORTERM=truecolor
 
+export OLLAMA_MODELS="/home/gergedan/ssd/SanDisk/ollama/data/models"
+
 # tmux override
 if [ -n "$TMUX" ]
 then
